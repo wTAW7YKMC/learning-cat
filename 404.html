@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>学习喵</title>
+    <script>
+        // 单页应用路由重定向
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        
+        // 如果是直接访问的路径，重定向到index.html
+        if (path !== '/' && !path.endsWith('.html')) {
+            var redirectUrl = window.location.origin + '/index.html' + search + hash;
+            window.location.replace(redirectUrl);
+        }
+    </script>
+</head>
+<body>
+    <noscript>
+        <p>请启用JavaScript来使用学习喵应用。</p>
+        <p><a href="/index.html">点击这里返回首页</a></p>
+    </noscript>
+</body>
+</html>
