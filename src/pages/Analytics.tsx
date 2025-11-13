@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Calendar, Clock, TrendingUp, Award, Star } from 'lucide-react'
+import { Calendar, Clock, TrendingUp, Award } from 'lucide-react'
 import { useAuthStore } from '@/stores/authStore'
 import { useTaskStore } from '@/stores/taskStore'
 import { useCardStore } from '@/stores/cardStore'

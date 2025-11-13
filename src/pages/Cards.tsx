@@ -2,16 +2,12 @@ import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { useCardStore } from '@/stores/cardStore'
-import { Search, Filter, Grid, List, Star, Zap, Crown, Book } from 'lucide-react'
+import { Search, Grid, List, Star, Zap, Crown, Book } from 'lucide-react'
 
 const Cards = () => {
   const { 
     cards, 
-    cardLibrary, 
-    getCollectionProgress,
-    getCardsByRarity,
-    getCardsByTheme,
-    getCardsBySubject 
+    getCollectionProgress
   } = useCardStore()
   
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')

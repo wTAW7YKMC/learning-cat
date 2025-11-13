@@ -194,7 +194,7 @@ export const useCardStore = create<CardState>()(
       },
 
       generateRandomCard: (difficulty) => {
-        const { cards } = get()
+        const { cards: _cards } = get()
         const random = Math.random()
         
         let rarity: Card['rarity'] = 'common'

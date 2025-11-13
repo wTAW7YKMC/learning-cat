@@ -3,11 +3,11 @@ import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { useTaskStore } from '@/stores/taskStore'
-import { Plus, Filter, Search, Play } from 'lucide-react'
+import { Plus, Play } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 const Tasks = () => {
-  const { tasks, addTask, updateTask, deleteTask, startTask } = useTaskStore()
+  const { tasks, addTask, startTask } = useTaskStore()
   const navigate = useNavigate()
   const [isAddingTask, setIsAddingTask] = useState(false)
   const [newTask, setNewTask] = useState({

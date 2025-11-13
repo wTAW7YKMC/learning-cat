@@ -22,7 +22,7 @@ const Timer = ({ taskId, onComplete }: TimerProps) => {
   const currentTask = taskId ? tasks.find(t => t.id === taskId) : null
 
   useEffect(() => {
-    let interval: NodeJS.Timeout
+    let interval: any
     
     if (isRunning) {
       interval = setInterval(() => {

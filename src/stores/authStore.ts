@@ -69,7 +69,7 @@ export const useAuthStore = create<AuthState>()(
         return false
       },
       
-      register: async (username: string, email: string, password: string) => {
+      register: async (username: string, email: string, _password: string) => {
         set({ isLoading: true })
         
         await new Promise(resolve => setTimeout(resolve, 1000))

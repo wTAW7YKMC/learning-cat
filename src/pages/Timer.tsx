@@ -9,7 +9,7 @@ import { Play, Pause, Square, Clock, Coffee, ArrowLeft } from 'lucide-react'
 const Timer = () => {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
-  const { tasks, updateTask, completeTask } = useTaskStore()
+  const { tasks, completeTask } = useTaskStore()
   const { addStudyTime, addCard } = useAuthStore()
   
   const [isRunning, setIsRunning] = useState(false)
@@ -22,7 +22,7 @@ const Timer = () => {
   const currentTask = taskId ? tasks.find(t => t.id === taskId) : null
 
   useEffect(() => {
-    let interval: NodeJS.Timeout
+    let interval: any
     
     if (isRunning) {
       interval = setInterval(() => {
@@ -104,7 +104,7 @@ const Timer = () => {
   const startTimer = () => {
     setIsRunning(true)
     if (currentTask && currentTask.status === 'pending') {
-      updateTask(currentTask.id, { status: 'in-progress' })
+      // updateTask(currentTask.id, { status: 'in-progress' })
     }
   }
 
