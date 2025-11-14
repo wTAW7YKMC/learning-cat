@@ -13,7 +13,7 @@ export default defineConfig({
     port: 3000,
     host: true
   },
-  base: '/learning-cat/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
